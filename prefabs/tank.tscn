@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8c5efanj363n"]
+
+[ext_resource type="Script" uid="uid://b61e2yw434787" path="res://scripts/TankClass.gd" id="1_h1xtq"]
+
+[node name="Tank" type="CharacterBody2D"]
+script = ExtResource("1_h1xtq")
+metadata/_custom_type_script = "uid://b61e2yw434787"
