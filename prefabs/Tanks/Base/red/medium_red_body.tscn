@@ -1,42 +1,30 @@
-[gd_scene load_steps=9 format=3 uid="uid://bx5vt8h6iarax"]
+[gd_scene load_steps=6 format=3 uid="uid://c564somewv0l5"]
 
-[ext_resource type="Texture2D" uid="uid://b7m776gwe5m6l" path="res://assets/graphics/Tanks/tanks_body_sheet.png" id="1_aarts"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_aarts"]
-atlas = ExtResource("1_aarts")
-region = Rect2(0, 96, 44, 64)
+[ext_resource type="Texture2D" uid="uid://buohiekypu10f" path="res://assets/graphics/Tanks/medium_Bodies_1.png" id="1_aarts"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3mmi4"]
 atlas = ExtResource("1_aarts")
-region = Rect2(44, 96, 44, 64)
+region = Rect2(0, 0, 44, 58)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d6m8f"]
 atlas = ExtResource("1_aarts")
-region = Rect2(88, 96, 44, 64)
+region = Rect2(44, 0, 44, 58)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_feemy"]
 atlas = ExtResource("1_aarts")
-region = Rect2(88, 96, 44, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e1ixj"]
-atlas = ExtResource("1_aarts")
-region = Rect2(44, 96, 44, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pkcj0"]
-atlas = ExtResource("1_aarts")
-region = Rect2(0, 96, 44, 64)
+region = Rect2(88, 0, 44, 58)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kdm51"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_aarts")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_3mmi4")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_d6m8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_feemy")
 }],
 "loop": true,
 "name": &"backwards",
@@ -47,22 +35,22 @@ animations = [{
 "texture": SubResource("AtlasTexture_feemy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e1ixj")
+"texture": SubResource("AtlasTexture_d6m8f")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pkcj0")
+"texture": SubResource("AtlasTexture_3mmi4")
 }],
 "loop": true,
 "name": &"forward",
 "speed": 5.0
 }]
 
-[node name="Medium_Red_Body" type="Node2D"]
+[node name="Small_Red_Body" type="Node2D"]
 
 [node name="BodyAnim" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kdm51")
-animation = &"backwards"
-frame_progress = 0.0173844
-offset = Vector2(0, 6)
+animation = &"forward"
+frame_progress = 0.574058
+offset = Vector2(0, 3)
 
 [node name="TurretMount" type="Marker2D" parent="."]

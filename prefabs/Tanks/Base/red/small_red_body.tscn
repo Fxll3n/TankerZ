@@ -1,42 +1,30 @@
-[gd_scene load_steps=9 format=3 uid="uid://kles15slqxon"]
+[gd_scene load_steps=6 format=3 uid="uid://kles15slqxon"]
 
-[ext_resource type="Texture2D" uid="uid://b7m776gwe5m6l" path="res://assets/graphics/Tanks/tanks_body_sheet.png" id="1_kdm51"]
+[ext_resource type="Texture2D" uid="uid://dx387yju00vpn" path="res://assets/graphics/Tanks/Small_Bodies_1.png" id="1_kdm51"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pp75w"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6dmd"]
 atlas = ExtResource("1_kdm51")
-region = Rect2(0, 0, 44, 48)
+region = Rect2(0, 0, 44, 42)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xn3ln"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vqic"]
 atlas = ExtResource("1_kdm51")
-region = Rect2(44, 0, 44, 48)
+region = Rect2(44, 0, 44, 42)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n3jwk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsrxy"]
 atlas = ExtResource("1_kdm51")
-region = Rect2(88, 0, 44, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_as70b"]
-atlas = ExtResource("1_kdm51")
-region = Rect2(88, 0, 44, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6bf1c"]
-atlas = ExtResource("1_kdm51")
-region = Rect2(44, 0, 44, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iabiu"]
-atlas = ExtResource("1_kdm51")
-region = Rect2(0, 0, 44, 48)
+region = Rect2(88, 0, 44, 42)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kdm51"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pp75w")
+"texture": SubResource("AtlasTexture_s6dmd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xn3ln")
+"texture": SubResource("AtlasTexture_8vqic")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n3jwk")
+"texture": SubResource("AtlasTexture_rsrxy")
 }],
 "loop": true,
 "name": &"backwards",
@@ -44,13 +32,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_as70b")
+"texture": SubResource("AtlasTexture_rsrxy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6bf1c")
+"texture": SubResource("AtlasTexture_8vqic")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iabiu")
+"texture": SubResource("AtlasTexture_s6dmd")
 }],
 "loop": true,
 "name": &"forward",
@@ -62,6 +50,7 @@ animations = [{
 [node name="BodyAnim" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kdm51")
 animation = &"backwards"
-offset = Vector2(0, 6)
+frame_progress = 0.0347208
+offset = Vector2(0, 3)
 
 [node name="TurretMount" type="Marker2D" parent="."]
